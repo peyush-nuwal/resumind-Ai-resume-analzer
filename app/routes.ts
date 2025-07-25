@@ -5,4 +5,5 @@ export default [
   { path: "/auth", file: "routes/auth.tsx" },
   { path: "/upload", file: "routes/upload.tsx" },
   { path: "/resume/:id", file: "routes/resume.tsx" },
+  { path: "/wipe", file: "routes/wipe.tsx" },
 ] satisfies RouteConfig;
