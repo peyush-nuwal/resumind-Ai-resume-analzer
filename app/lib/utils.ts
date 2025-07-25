@@ -1,4 +1,7 @@
-  // Converts bytes to a human-readable string (KB, MB, GB)
+import clsx, { type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+// Converts bytes to a human-readable string (KB, MB, GB)
  export function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
   const kb = bytes / 1024;
@@ -11,3 +14,8 @@
 
 
 export const generateUUID = () => crypto.randomUUID()
+
+
+export function cn(...inputs: ClassValue[]) {
+   return twMerge(clsx(inputs))
+}
