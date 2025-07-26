@@ -62,7 +62,7 @@ const resume = () => {
         </Link>
       </nav>
       <div className="w-full flex flex-row max-lg:flex-col-reverse  ">
-        <section className=" feedback-section bg-[url('/images/bg-small.svg)] bg-cover h-screen items-center justify-center">
+        <section className="sticky top-0 feedback-section bg-[url('/images/bg-small.svg)] bg-cover h-screen items-center justify-center">
           {imageUrl && resumeUrl && (
             <div className="max-sm:m-0 h-[90%] max-2xl:h-fit w-fit  gradient-border animate-in fade-in duration-1000">
               <a href={resumeUrl} target="_blank" download={`${id}.pdf`}>
@@ -80,12 +80,12 @@ const resume = () => {
           <h2>Resume Review</h2>
           {feedback ? (
             <div className="flex flex-col gap-8 animate-in fade-in duration-1000">
-              <Summary feedback={feedback } />
+              <Summary feedback={feedback} />
               <ATS
                 score={feedback.ATS.score || 0}
                 suggestions={feedback.ATS.tips || []}
               />
-              <Details feedback={feedback } />
+              <Details feedback={feedback} />
             </div>
           ) : (
             <img src="/images/resume-scan-2.gif" alt="" className="w-full " />
